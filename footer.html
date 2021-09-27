@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- bootstrap 引入 -->
+    <link rel="stylesheet" href="./stylesheet/all.css" />
+
+    <!-- scrollreveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- JQ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a6b2994ba0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <footer-component
+        :logo-img="logoImg"
+        :site-phone="sitePhone"
+        :site-address="siteAddress"
+        :site-ig="siteIg"
+        :site-Title="siteTitle"
+      ></footer-component>
+    </div>
+
+    <script src="./js/footer.js"></script>
+  </body>
+</html>

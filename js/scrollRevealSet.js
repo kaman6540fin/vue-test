@@ -1,0 +1,1 @@
+ScrollReveal().reveal('.bg', {distance: '-50px', duration:5000,})

@@ -1,0 +1,221 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "./variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//自訂
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Yellowtail&display=swap");
+
+//變數
+$font-family-base: "Open Sans", "adobe-hebrew", "Yellowtail", "Noto Sans TC",
+  "Noto Serif TC", Arial, sans-serif;
+$font-family-title: "Yellowtail", Arial, sans-serif;
+$font-family-site: "Noto Serif TC", Arial, sans-serif;
+$primary: #496146;
+$secondary: #e3eae2;
+$white: #fff;
+$spacer: 1rem;
+
+@mixin overflow {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+@mixin imgWidth-100 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+//--Basic
+body {
+  font-family: $font-family-base;
+  color: $primary;
+  background: $white;
+  @include overflow;
+}
+
+//section-01
+
+#section-1 {
+  > .bg {
+    width: 640px;
+    height: 640px;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+  }
+  > .logo {
+    font-family: $font-family-title;
+    font-size: 65px;
+    letter-spacing: 10.5px;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-right: 105px;
+    }
+    .title {
+      margin-left: 74px;
+      transform: translateY(40px);
+      writing-mode: vertical-lr;
+      > span {
+        font-family: $font-family-site;
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: 79px;
+      }
+      > span:nth-of-type(1)::after {
+        display: inline-block;
+        content: "";
+        width: 45px;
+        height: 1px;
+        background: $primary;
+        margin-bottom: 79px;
+      }
+    }
+  }
+}
+
+//section-2
+.roomsHeader {
+  > h1 {
+    font-family: $font-family-title;
+    color: $primary;
+    letter-spacing: 10.5px;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 65px;
+  }
+}
+
+.boxTitle {
+  font-family: "Noto Serif TC";
+  writing-mode: vertical-rl;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: $primary;
+}
+
+.box {
+  border-width: 1px;
+  border-color: #e3eae2;
+  border-style: solid;
+  width: 320px;
+  padding: 10px;
+  margin-bottom: 90px;
+
+  .boxImg {
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    margin-bottom: 10px;
+  }
+
+  .boxBody {
+    > .room-detail {
+      padding: 0 10px;
+      border-bottom: 1px solid $secondary;
+      p.h6 {
+        font-family: "Noto Sans TC";
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      p {
+        font-family: "Noto Serif TC";
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    > .room-services {
+      padding: 10px;
+      border-bottom: 1px solid $secondary;
+      p {
+        font-family: "Noto Sans TC";
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    > .room-holidayPrice,
+    .room-normalPrice {
+      padding: 10px 50px;
+      > p {
+        font-family: "Noto Serif TC";
+        color: #a5bb94;
+        font-size: 18px;
+        > span {
+          font-family: "Noto Sans TC";
+          color: $primary;
+          font-size: 12px;
+          font-weight: 300;
+          margin-right: 50px;
+        }
+      }
+    }
+
+    > .room-normalPrice {
+      background-color: $secondary;
+      > p {
+        font-size: 26px;
+        color: $primary;
+        letter-spacing: 4.16px;
+        > span {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #425752;
+  padding: 30px 120px;
+  .footer-logo {
+    margin-right: 30px;
+    > img {
+      width: 60px;
+      fill: $secondary;
+    }
+    > p {
+      font-size: 12px;
+      letter-spacing: 8px;
+      font-weight: 300;
+      color: #ffffff;
+      font-family: "Noto Serif TC";
+    }
+  }
+
+  .footer-info::before {
+    display: inline-block;
+    content: "";
+    height: 40px;
+    width: 1px;
+    background: $secondary;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .footer-info {
+    color: #ffffff;
+    margin-left: 30px;
+    position: relative;
+    > div {
+      margin-bottom: 15px;
+      > div {
+        width: 15px;
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      > p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

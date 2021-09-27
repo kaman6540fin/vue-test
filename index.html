@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+
+    <!-- bootstrap 引入 -->
+    <link rel="stylesheet" href="./stylesheet/all.css" />
+
+    <!-- scrollreveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- JQ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a6b2994ba0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="main" class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="section-1" :class="flexCenter" :style="sectionMinheight">
+            <div
+              class="bg"
+              :style="{backgroundImage: 'url('+ siteData.siteImg.bannerImg + ')'}"
+            ></div>
+            <div
+              class="logo d-flex align-items-center"
+              :class="'position-absolute'"
+            >
+              <img :src="siteData.siteImg.logoImg" alt="" />
+              {{siteData.siteLogoEng}}
+              <div class="title" v-html="siteData.siteLogoChi"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/scrollRevealSet.js"></script>
+  </body>
+</html>
